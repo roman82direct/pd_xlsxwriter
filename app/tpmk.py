@@ -12,8 +12,12 @@ required_cols = [
     'Ассортимент', 'Ассортимент ГМ', 'Закупщик', 'Бренд', 'Группа 1',
     'Группа 2', 'Группа 3'
 ]
-df = pd.read_excel('data/tpmk_new.xlsx', usecols=required_cols, header=1)
+df = pd.read_excel('data/input/tpmk_new.xlsx',
+                   usecols=required_cols, header=1, index_col=0)
 
-print(df.shape)
-print(df.info())
-df.to_excel('data/tpmk_handled.xlsx')
+# print(df.index)
+# print(df.columns.to_list())
+# print(df.head(10))
+# print(df.loc['871-155'])
+
+# df.to_excel('data/output/tpmk_handled.xlsx')
